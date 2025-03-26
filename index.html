@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Tienda Online</title>
+</head>
+<body class = "bg-gray-100">
+
+    <!--Header Start-->
+    <header id="header" class="bg-white py-5 shadow">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="w-1/2">
+                    <img src="./img/logo.png" alt="logo" class="w-48" />
+                </div>
+                <div class="relative">
+                    <ul>
+                        <!--Contenedor del carrito-->
+                        <li class = "relative submenu   ">
+                            <img 
+                            src="./img/cart.png" 
+                            alt="cart" 
+                            id="img-carrito" 
+                            class="w-8 cursor-pointer"/>
+                            <div 
+                            id="carrito" 
+                            class="absolute right-0 bg-white border border-gray-200 p-4 shadow-lg"
+                            >
+                                <table id="lista-carrito" class="w-full-text-sm table-auto">
+                                    <thead>
+                                        <tr class="bg-gray-100">
+                                            <th class = "px-4 py-2">Imagen</th>
+                                            <th class = "px-4 py-2">Nombre</th>
+                                            <th class = "px-4 py-2">Precio</th> 
+                                            <th class = "px-4 py-2">Cantidad</th>
+                                            <th class = "px-4 py-2"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-200"></tbody>
+                                </table>
+                                <a href="#" id="vaciar-carrito" class="block bg-red-500 text-white text-center font-semibold py-2 rounded-lg mt-4 hover:bg-red-600">Vaciar Carrito</a>
+                            </div>
+                        </li>
+                        <!--Fin contenedor del carrito-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!--Header End-->
+
+
+<!--HERO-->
+<section
+id="purch"
+class="bg-cover bg-center min-h-[350px]"
+style="background-image: url('img/compra1.png')"
+>
+<div class="container mx-auto px-4 h-full flex items-center">
+  <div class="w-full md:w-1/2 mt-20">
+    <div class="bg-white opacity-75 p-6 rounded">
+      <h2 class="text-3xl text-blue-900 font-bold mb-2">
+        Lo Mejor en Tecnología
+      </h2>
+      <p class="mb-4">Precios Insuperables</p>
+      <form action="#" id="busqueda" method="post" class="relative">
+        <input
+          class="w-full h-12 px-4 border border-gray-300 rounded focus:outline-none"
+          type="text"
+          placeholder="¿Qué quieres comprar?"
+          id="buscador"
+        />
+        <input
+          type="submit"
+          id="submit-buscador"
+          class="absolute right-0 top-0 h-full w-12 bg-blue-600 bg-no-repeat bg-center bg-contain rounded-r cursor-pointer"
+          style="
+            background-image: url('img/lupa2.png');
+            background-size: 50%;
+          "
+          value=""
+        />
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+<!--HERO-->
+
+<!--Barra Iconos-->
+<section class="py-5 bg-gradient-to-r from-[#350b77] to-[#4e82e4]">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-around items-center">
+        <div class="flex items-center mb-4 md:mb-0">
+          <img src="./img/icono1.png" alt="icono1" />
+          <p class="text-white text-center">
+            Mas de 1000 aticulos<br />Lo ultimo en tecnolgía
+          </p>
+        </div>
+        <div class="flex items-center mb-4 md:mb-0">
+          <img src="./img/icono2.png" alt="icono1" />
+          <p class="text-white text-center">
+            Mantente actualizad<br />Las mejores marcas a tu alcance
+          </p>
+        </div>
+        <div class="flex items-center mb-4 md:mb-0">
+          <img src="./img/icono3.png" alt="icono1" />
+          <p class="text-white text-center">
+            Pasión por el servicio<br />Te asesoramos en tu compra.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Barra Iconos-->
+
+<!--listado de articulos-->
+<section id="lista-articulos" class="container mx-auto px-4 my-8">
+    <h1 class="text-center text-4xl font-light mb-8">Los mejores gadgets</h1>
+    <div  class="grid grid-cols-1 md:grid-cols-3 gap-6">
+         <!--Card articulo 1-->
+         <div class="card bg-white border border gray-200 rounded-lg shadow-xl">
+            <img src="./img/articulo1.jpg" 
+            alt="articulo1" 
+            class="w-full border border-gray-300">
+            <div p-4>
+                <h4 class="text-lg font-bold">Tablet 8" 64GB</h4>
+                <p class="text-gray-600">Samsung</p>
+                <img src="./img/estrellas.png" alt="estrellas" class="my-2">
+                <p class="precio tex-sm mt-2"><span class="line-through">$800.000  
+                </span> <span class="font-bold text-xl ml-2">$650.000</span></p>
+                <a href="#" 
+                class="agregar carrito block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-800">Agregar al Carrito</a>
+            </div>
+        </div>
+        <!--Card articulo 1-->
+
+         <!--Card articulo 2-->
+         <div class="card bg-white border border gray-200 rounded-lg shadow-xl">
+            <img src="./img/articulo2.jpg" 
+            alt="articulo2" 
+            class="w-full border border-gray-300">
+            <div p-4>
+                <h4 class="text-lg font-bold">Parlante Bluetooth HD</h4>
+                <p class="text-gray-600">JBL</p>
+                <img src="./img/estrellas.png" alt="estrellas" class="my-2">
+                <p class="precio tex-sm mt-2"><span class="line-through">$500.000  
+                </span> <span class="font-bold text-xl ml-2">$350.000</span></p>
+                <a href="#" 
+                class="agregar carrito block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-800">Agregar al Carrito</a>
+            </div>
+        </div>
+        <!--Card articulo 2-->
+
+         <!--Card articulo 3-->
+         <div class="card bg-white border border gray-200 rounded-lg shadow-xl">
+            <img src="./img/articulo3.jpg" 
+            alt="articulo3" 
+            class="w-full border border-gray-300">
+            <div p-4>
+                <h4 class="text-lg font-bold">Audifonos HD</h4>
+                <p class="text-gray-600">Beats</p>
+                <img src="./img/estrellas.png" alt="estrellas" class="my-2">
+                <p class="precio tex-sm mt-2"><span class="line-through">$500.000  
+                </span> <span class="font-bold text-xl ml-2">$250.000</span></p>
+                <a href="#" 
+                class="agregar carrito block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-800">Agregar al Carrito</a>
+            </div>
+        </div>
+        <!--Card articulo 3-->  
+
+        <!--Card articulo 4-->
+                 <div class="card bg-white border border gray-200 rounded-lg shadow-xl">
+                    <img src="./img/articulo4.jpg" 
+                    alt="articul43" 
+                    class="w-full border border-gray-300">
+                    <div p-4>
+                        <h4 class="text-lg font-bold">Laptop Core i7 y SSD 256</h4>
+                        <p class="text-gray-600">Dell</p>
+                        <img src="./img/estrellas.png" alt="estrellas" class="my-2">
+                        <p class="precio tex-sm mt-2"><span class="line-through">$4.500.000  
+                        </span> <span class="font-bold text-xl ml-2">$3.600.000</span></p>
+                        <a href="#" 
+                        class="agregar carrito block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-800">Agregar al Carrito</a>
+                    </div>
+                </div>
+    <!--Card articulo 4-->  
+<!--Arreglar Orden con los articulos!!-->
+            <!--Card articulo 5-->
+            <div class="card bg-white border border gray-200 rounded-lg shadow-xl">
+                <img src="./img/articulo5.jpg" 
+                alt="articulo6" 
+                class="w-full border border-gray-300">
+                <div p-4>
+                    <h4 class="text-lg font-bold">Celular Camara 100Mpx</h4>
+                    <p class="text-gray-600">HP</p>
+                    <img src="./img/estrellas.png" alt="estrellas" class="my-2">
+                    <p class="precio tex-sm mt-2"><span class="line-through">$3.200.000  
+                    </span> <span class="font-bold text-xl ml-2">$2.980.000</span></p>
+                    <a href="#" 
+                    class="agregar carrito block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-800">Agregar al Carrito</a>
+                </div>
+            </div>
+            <!--Card articulo 5-->  
+
+                        <!--Card articulo 7-->
+                        <div class="card bg-white border border gray-200 rounded-lg shadow-xl">
+                            <img src="./img/articulo7.jpg" 
+                            alt="articulo7" 
+                            class="w-full border border-gray-300">
+                            <div p-4>
+                                <h4 class="text-lg font-bold">iMac</h4>
+                                <p class="text-gray-600">Honor</p>
+                                <img src="./img/estrellas.png" alt="estrellas" class="my-2">
+                                <p class="precio tex-sm mt-2"><span class="line-through">$1.500.000  
+                                </span> <span class="font-bold text-xl ml-2">$980.000</span></p>
+                                <a href="#" 
+                                class="agregar carrito block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-800">Agregar al Carrito</a>
+                            </div>
+                        </div>
+                        <!--Card articulo 7-->  
+
+                                    <!--Card articulo 8-->
+            <div class="card bg-white border border gray-200 rounded-lg shadow-xl">
+                <img src="./img/articulo8.jpg" 
+                alt="articulo5" 
+                class="w-full border border-gray-300">
+                <div p-4>
+                    <h4 class="text-lg font-bold">Teclado Bluetooth</h4>
+                    <p class="text-gray-600">Redragon</p>
+                    <img src="./img/estrellas.png" alt="estrellas" class="my-2">
+                    <p class="precio tex-sm mt-2"><span class="line-through">$1.500.000  
+                    </span> <span class="font-bold text-xl ml-2">$980.000</span></p>
+                    <a href="#" 
+                    class="agregar carrito block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-800">Agregar al Carrito</a>
+                </div>
+            </div>
+            <!--Card articulo 8-->  
+
+                        <!--Card articulo 9-->
+                        <div class="card bg-white border border gray-200 rounded-lg shadow-xl">
+                            <img src="./img/articulo9.jpg" 
+                            alt="articulo5" 
+                            class="w-full border border-gray-300">
+                            <div p-4>
+                                <h4 class="text-lg font-bold">Mosue Inalambrico</h4>
+                                <p class="text-gray-600">Razer</p>
+                                <img src="./img/estrellas.png" alt="estrellas" class="my-2">
+                                <p class="precio tex-sm mt-2"><span class="line-through">$150.000     
+                                </span> <span class="font-bold text-xl ml-2">$100.000</span></p>
+                                <a href="#" 
+                                class="agregar carrito block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-800">Agregar al Carrito</a>
+                            </div>
+                        </div>
+                        <!--Card articulo 9->  
+
+                                    <!--Card articulo 10-->
+            <div class="card bg-white border border gray-200 rounded-lg shadow-xl">
+                <img src="./img/articulo10.jpg" 
+                alt="articulo10" 
+                class="w-full border border-gray-300">
+                <div p-4>
+                    <h4 class="text-lg font-bold">Microfono NR</h4>
+                    <p class="text-gray-600">Tonor</p>
+                    <img src="./img/estrellas.png" alt="estrellas" class="my-2">
+                    <p class="precio tex-sm mt-2"><span class="line-through">$600.000  
+                    </span> <span class="font-bold text-xl ml-2">$500.000</span></p>
+                    <a href="#" 
+                    class="agregar carrito block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-800">Agregar al Carrito</a>
+                </div>
+            </div>
+            <!--Card articulo 10-->  
+
+                        <!--Card articulo 11-->
+                        <div class="card bg-white border border gray-200 rounded-lg shadow-xl">
+                            <img src="./img/articulo11.jpg" 
+                            alt="articulo11" 
+                            class="w-full border border-gray-300">
+                            <div p-4>
+                                <h4 class="text-lg font-bold">Camara Web full HD</h4>
+                                <p class="text-gray-600">Genius</p>
+                                <img src="./img/estrellas.png" alt="estrellas" class="my-2">
+                                <p class="precio tex-sm mt-2"><span class="line-through">$200.000  
+                                </span> <span class="font-bold text-xl ml-2">$180.000</span></p>
+                                <a href="#" 
+                                class="agregar carrito block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-800">Agregar al Carrito</a>
+                            </div>
+                        </div>
+                        <!--Card articulo 11-->  
+
+                                    <!--Card articulo 12-->
+            <div class="card bg-white border border gray-200 rounded-lg shadow-xl">
+                <img src="./img/articulo12.jpg" 
+                alt="articulo12" 
+                class="w-full border border-gray-300">
+                <div p-4>
+                    <h4 class="text-lg font-bold">Silla ergonomica</h4>
+                    <p class="text-gray-600">HP</p>
+                    <img src="./img/estrellas.png" alt="estrellas" class="my-2">
+                    <p class="precio tex-sm mt-2"><span class="line-through">$900.000  
+                    </span> <span class="font-bold text-xl ml-2">$810.000</span></p>
+                    <a href="#" 
+                    class="agregar carrito block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-800">Agregar al Carrito</a>
+                </div>
+            </div>
+            <!--Card articulo 12-->  
+            
+                <!--Card articulo 12-->
+                <div class="card bg-white border border gray-200 rounded-lg shadow-xl">
+                    <img src="./img/articulo12.jpg" 
+                    alt="articulo12" 
+                    class="w-full border border-gray-300">
+                    <div p-4>
+                        <h4 class="text-lg font-bold">Silla ergonomica</h4>
+                        <p class="text-gray-600">HP</p>
+                        <img src="./img/estrellas.png" alt="estrellas" class="my-2">
+                        <p class="precio tex-sm mt-2"><span class="line-through">$900.000  
+                        </span> <span class="font-bold text-xl ml-2">$810.000</span></p>
+                        <a href="#" 
+                        class="agregar carrito block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-800">Agregar al Carrito</a>
+                    </div>
+                </div>
+                <!--Card articulo 12-->  
+</section>
+<!--listado de articulos-->
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
