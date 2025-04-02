@@ -13,14 +13,30 @@ function registerEventListeners(){                 //Esto va a mostrar cualquier
 //---------------------------------------
 //Funciones
 /* function agregarArticulo(){
-    console.log('Hiciste click en articulos')     //Esto seria sin eventos
+    console.log('Hiciste click en articulos')     //Esto seria sin eventos  
 } */
 
 function agregarArticulo(e){  //Recordemos que e es EVENTO   //Este detecta especificamente si lke doy click a un titulo o imagen, y lo muestra en consola
+    e.preventDefault();   //Esto evita que se mueva el cursor
     if(e.target.classList.contains('agregar-carrito')){
-        console.log('le diste click a un boton de agregar al carrito');
+        const articuloSeleccionado =e.target.parentElement.parentElement //Funcion correcta para mostrar en consola que se ha clickado el boton en cualqueir lugar de las tarjetas
+        leerDatosArticulo(articuloSeleccionado);
     }
 };
+
+
+function leerDatosArticulo(articulo){
+    console.log(articulo);
+    //vamos a crear un objeto litera con la info del articulo
+    const infoArticulo={
+        imagen: articulo.querySelector("img").src,
+        titulo: articulo.querySelector("h4").textContent,
+        precio: articulo.querySelector(".precio span:last-of-type").textContent,
+        id: articulo.querySelector("a").getAttribute("data-id"),
+        cantidad: 1,
+    };
+    console.log(infoArticulo);
+}
 
 
 
