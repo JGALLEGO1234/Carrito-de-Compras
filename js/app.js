@@ -2,12 +2,12 @@
 const vaciarCarrito = document.querySelector("#vaciar-carrito");
 const listaArticulos = document.querySelector("#lista-articulos");       //Esto es absolutamente toda la lista de articulos
 const carrito = document.querySelector("#carrito");
-const divCarrito = document.querySelector("#lista-carrito");
+const divCarrito = document.querySelector("#lista-carrito tbody");
 
 //registrar eventos
 registerEventListeners();
 function registerEventListeners(){                 //Esto va a mostrar cualquier click que haga sobre la tarjeta.
-    listaArticulos.addEventListener('click', agregarArticulo);         //Aqui se registra el evento de click en la lista de articulos
+    listaArticulos.addEventListener("click", agregarArticulo);         //Aqui se registra el evento de click en la lista de articulos
 }                                  //Aqui va la funcion o las intrucciones
 
 //---------------------------------------
@@ -16,10 +16,11 @@ function registerEventListeners(){                 //Esto va a mostrar cualquier
     console.log('Hiciste click en articulos')     //Esto seria sin eventos
 } */
 
-function agregarArticulo(e){
-    console.log(e.target);   //Recordemos que e es EVENTO   //Este detecta especificamente si lke doy click a un titulo o imagen, y lo muestra en consola
-}
-
+function agregarArticulo(e){  //Recordemos que e es EVENTO   //Este detecta especificamente si lke doy click a un titulo o imagen, y lo muestra en consola
+    if(e.target.classList.contains('agregar-carrito')){
+        console.log('le diste click a un boton de agregar al carrito');
+    }
+};
 
 
 
